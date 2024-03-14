@@ -16,11 +16,11 @@ class AnimalsFoodFactory extends Factory
      */
     public function definition(): array
     {
+        $animals = Animal::all()->pluck('id');
+        $food = Food::all()->pluck('id');
         return [
-            DB::table('workers_animals')->insert([
-                'animal_id' => $this->faker->numberBetween(1, 10),
-                'food_id' => $this->faker->numberBetween(1, 10),
-            ])
+            'animal_id' => $animals->random(),
+            'food_id' => $food->random(),
         ];
     }
 }

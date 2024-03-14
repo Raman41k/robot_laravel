@@ -19,11 +19,11 @@ class AnimalsWorkersFactory extends Factory
      */
     public function definition(): array
     {
+        $animals = Animal::all()->pluck('id');
+        $worker = Worker::all()->pluck('id');
         return [
-            DB::table('workers_animals')->insert([
-                'animal_id' => $this->faker->numberBetween(1, 10),
-                'worker_id' => $this->faker->numberBetween(1, 10),
-            ])
+            'animal_id' => $animals->random(),
+            'worker_id' => $worker->random(),
         ];
     }
 }

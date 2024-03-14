@@ -12,6 +12,8 @@
                     <p class="font-normal text-gray-700 dark:text-gray-400">Workers for {{ $animal->name }} -> {{ $worker->name }}</p>
                 @endforeach
 
+                <hr>
+
                 @foreach ($animal->food as $food)
                     <p class="font-normal text-gray-700 dark:text-gray-400">{{ $animal->name }} eats -> {{ $food->name }}</p>
                 @endforeach

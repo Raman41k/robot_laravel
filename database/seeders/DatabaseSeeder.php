@@ -21,14 +21,9 @@ class DatabaseSeeder extends Seeder
         Animal::factory(10)->create();
         Food::factory(10)->create();
         Worker::factory(10)->create();
-//        AnimalsFoodFactory::factoryForModel(10)->create();
-//        AnimalsWorkersFactory::factoryForModel(10)->create();
-
-//         \App\Models\User::factory(10)->create();
-//
-//         \App\Models\User::factory()->create([
-//             'name' => 'Test User',
-//             'email' => 'test@example.com',
-//         ]);
+        $this->call([
+            AnimalFoodSeeder::class,
+            AnimalWorkerSeeder::class
+        ]);
     }
 }
