@@ -13,11 +13,7 @@ return new class extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->unsignedBigInteger('worker_id')->nullable();
-            $table->unsignedBigInteger('food_id')->nullable();
-            $table->foreign('worker_id')->references('id')->on('workers');
-            $table->foreign('food_id')->references('id')->on('food');
+            $table->string('name');
             $table->timestamps();
         });
     }
