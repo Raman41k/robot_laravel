@@ -27,6 +27,12 @@
                     <li>
                         <a href="{{ route('animals')  }}" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Animals</a>
                     </li>
+                    <li>
+                        <a href="{{ route('food.all')  }}" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Food</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('workers')  }}" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Workers</a>
+                    </li>
                 </ul>
             </div>
         </div>
