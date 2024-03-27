@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\HeroController;
 use App\Http\Controllers\WorkerController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,6 @@ Route::get('/workers', [WorkerController::class, 'index'])->name('workers');
 Route::get('/animals/{animal}', [AnimalController::class, 'getOneAnimal'])->name('animals.animal');
 Route::get('/food/{food}', [FoodController::class, 'getOneFood'])->name('food.food');
 Route::get('/workers/{worker}', [WorkerController::class, 'getOneWorker'])->name('workers.worker');
+
+Route::get('/gunStrategy', [HeroController::class, 'strategyPattern']);
+Route::get('/gunFactory', [HeroController::class, 'factoryPattern']);
